@@ -1,31 +1,570 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <link href="calculator's style.css" rel="stylesheet" type="text/css">
-    <title>皇家计算器</title>
-    <script src="confirm.js"></script>
-</head>
-<body>
-<img src="calculator.png"></img>
-<div class="calculator">
-<div class="input">
-    <h1>皇家计算器</h1>
-    <h2>只能输入数字哦，不信你试试</h2>
-        Number1:  <input id="num1" type="number"><p></p >
-        Number2:  <input id="num2" type="number"><p></p >
+<html lang="en">
+   <head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <title>Simple Health</title>
+   </head>
+   <body class="main-layout">
+<!--加载图标-->
+     <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+<!--页面-->
+      <header>
+         <div class="header">
+            <div class="container">
+               <div class="row">
+<!--导航-->
+  <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light bg-#eae9e4 fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand col-xl-3 col-lg-3 col-md-3 col-sm-3" href="index.html">Simple Health</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#banner_main">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#food">Diet</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Exercise">Exercise</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#Sleep">Sleep</a></li>
+            <li><a class="dropdown-item" href="#Products">Share</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#footer">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Search</button>
+      </form>
     </div>
-    <div class="button">
-    <button onclick="MCK(1)" id="tst1">加</button>
-    <button onclick="MCK(2)" id="tst1">减</button>
-    <button onclick="MCK(3)" id="tst1">乘</button>
-    <button onclick="MCK(4)" id="tst1">除</button>
-    <button onclick="MCK(5)" id="tst2">清零</button>
-    </div>
-    <div id="result">
-    </div>
-    <div>
-    <h3>水平有限, 谢绝两个数字以上的复合运算</h3>
+  </div>
+</nav>
+
+               </div>
+            </div>
+         </div>
+      </header>
+
+<!--第一页-->
+<section class="banner_main" id="banner_main">
+         <div class="container">
+         <div class="row">
+<!--左边段落-->
+<div class="col-md-6">
+               <div class="text-bg">
+                  <h1>Health</h1>
+                  <h1>Everywhere</h1>
+                  <h1>In Life</h1>
+                  <p>A healthy regular life become extravagant gradually?</p>
+                  <p>Only the gym can work out?</p>
+                  <p>Too much stress to sleep?</p>
+                  <div class="introduction"><p>Here you will get all kinds of simple health</p></div><br>
+                  <a class="read_more" href="#">Read More</a>
+               </div>
+            </div>
+<!--轮播图-->
+<div class="col-md-6">
+  <form id="request" class="main_form">
+  <div id="myCarousel" class="carousel slide clients_Carousel " data-ride="carousel">
+     <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+     </ol>
+     <div class="carousel-inner">
+        <div class="carousel-item active">
+           <div class="container">
+              <div class="carousel-caption">
+                 <div class="row">
+                    <div class="col-md-12">
+                       <div class="imga">
+                          <figure><img src="images/carousel2.png" alt="#"></figure>
+                       </div>
+                       <div class="test_box">
+                          <h4>Sleep helper</h4>
+                          <p>Sleep used to be neglected, like leaving your car in the garage and picking it up in the morning<br>Stay away from insomnia and have good dreams every night</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="carousel-item">
+           <div class="container">
+              <div class="carousel-caption">
+                 <div class="row">
+                    <div class="col-md-12">
+                       <div class="imga">
+                          <figure><img src="images/1.png" alt="#"></figure>
+                       </div>
+                       <div class="test_box">
+                          <h4>Hip.Fit</h4>
+                          <p>Exercises can easily be done throughout the day—while working at the desk, on the move, baby workouts, in bed before sleeping, brushing your teeth, and much more.</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="carousel-item">
+           <div class="container">
+              <div class="carousel-caption">
+                 <div class="row">
+                    <div class="col-md-12">
+                       <div class="imga">
+                          <figure><img src="images/carousel.png" alt="#"></figure>
+                       </div>
+                       <div class="test_box">
+                          <h4>trophic analysis</h4>
+                          <p>Dietitians will teach you how to make simple and healthy meals quickly in your busy life.</p>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Previous</span>
+     </a>
+     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+     </a>
+  </div>
+
+               </form>
+            </div>
+         </div>
+       </div>
+     </section>
+<!--第二页-->
+      <div id="food" class="food">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2> <strong class="yellow">Healthy </strong>Diet</h2>
+                     <span>Eat take-out every day? Too busy to cook everyday?<br>Here you'll spend less than half an hour cooking for the rest of the week.</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+<!--三个卡片-->
+              <div class="col-md-4">
+                <div class="card-body">
+                     <i><img src="images/food3.png" alt="#"/></i>
+                     <h4>Breakfast</h4>
+                     <p>is the most important meal of the whole day, so make sure you have enough good protein and DF(dietary fiber).</p><hr/>
+                     <div class="menu">
+                     <p>Egg Sandwich</p><hr/>
+                     <p>Yogurt Muffin</p><hr/>
+                     <p>Soybean Milk Box</p><hr/>
+                   </div>
+                     <a class="read_more" href="https://www.bilibili.com/video/BV1Ay4y1u7UW?spm_id_from=333.337.search-card.all.click">Read More</a>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="card-body">
+                     <i><img src="images/food2.png" alt="#"/></i>
+                     <h4>Lunch</h4>
+                     <p>should be based on grains, with plenty of vegetables and fruits, moderate amounts of meat and fish.</p><hr/>
+                     <div class="menu">
+                     <p>Pork Chop Soup</p><hr/>
+                     <p>Avocado Pastry</p><hr/>
+                     <p>Cola Chicken Wings</p><hr/>
+                   </div>
+                     <a class="read_more" href="https://www.bilibili.com/video/BV1nC4y147VV?spm_id_from=333.337.search-card.all.click">Read More</a>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="card-body">
+                     <i><img src="images/food1.png" alt="#"/></i>
+                     <h4>Supper</h4>
+                     <p>shouldn't eat overmuch protein、adipose、oil and sault, lest cause indigestion and affect morpheus.</p><hr/>
+                     <div class="menu">
+                     <p>Beancurd Soup</p><hr/>
+                     <p>Vegetable Salad</p><hr/>
+                     <p>Mung Bean Porridge</p><hr/>
+                   </div>
+                     <a class="read_more" href="https://www.bilibili.com/video/BV1Uv411N7Kh?spm_id_from=333.337.search-card.all.click">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+<!--第三页-->
+      <div id="Exercise" class="exercise">
+         <div class="container">
+<!--标题-->
+          <div class="row">
+           <div class="col-md-12">
+              <div class="titlepage">
+                <span>Refer to Hip.Fit</span>
+                <h2> Exercise <strong class="yellow">Everywhere in Life</strong></h2>
+              </div>
+           </div>
+          </div>
+<!--卡片-->
+<!--第一行-->
+<div class="office">
+  <h2>In the Office.</h2>
+<div class="row">
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+  <img src="images/1.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Back of the Legs Stretch</h4>
+    <p class="card-text">If you don’t sit properly you could be reducing the ability for blood to circulate properly, especially in your legs.</p><hr/>
+    <h5>Instructions</h5>
+    <p>While sitting, extend your legs and fold your body and reach down towards your toes. Make sure to keep your back straight.</p><hr/>
+    <a class="read_more" href="https://www.hip.fit/e/back-of-the-legs-stretch">Read More</a>
+    <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+  </div>
 </div>
-</body>
+  </div>
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+  <img src="images/3.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Chair Back Stretch</h4>
+    <p class="card-text">All you need is the back of a chair.You get to stretch the back of your thighs and your low back at the same time.</p><hr/>
+    <h5>Instructions</h5>
+    <p>Stand up straight with a slight knee bend and your arms above your head. Begin the stretch by bending at the waist while keeping your feet flat on the ground, back straight, and arms above the head.</p><hr/>
+    <a class="read_more" href="https://www.hip.fit/e/chair-back-stretch">Read More</a>
+    <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+  <img src="images/2.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Desk Thighs Flexibility Balance</h4>
+    <p class="card-text">When you spend all day sitting down, you lose a lot of your mobility and balance.</p><hr/>
+    <h5>Instructions</h5>
+    <p>Using the desk for support, stand up and raise your leg behind you, grabbing hold of the ankle (or your shin if you cant quite reach). Lift the leg as high as you can keeping your knee bent at a right angle.</p><hr/>
+    <a class="read_more" href="https://www.hip.fit/e/desk-thighs-flexibility-balance">Read More</a>
+    <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+  <img src="images/4.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Standing While Working</h4>
+    <p class="card-text">Standing at your desk at work helps offset all that sitting time and allows you to work on your strength and posture.</p><hr/>
+    <h5>Instructions</h5>
+    <p>Its important not to do too much at one time so work your way up to a full day of standing with an hour or two at a time. Also make sure your computer and keyboard are at a good height so you aren't straining your eyes or your neck with bad posture.</p><hr/>
+    <a class="read_more" href="https://www.hip.fit/e/standing-while-working">Read More</a>
+    <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+<!--第二行-->
+<div class="bathroom">
+  <h2>In the Bathroom.</h2>
+<div class="row">
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+  <img src="images/7.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Drop The Soap</h4>
+    <p class="card-text">You’ll stretch tight hamstrings while also working your glutes.Take it slow since you’re starting from a squat, barefoot in a slippery wet shower. Drop the Soap might have a slightly odd look to it, but, nobody is looking, right? </p><hr/>
+    <h5>Instructions</h5>
+    <p>Squat down with your knees bent and arch your back. Put your fingers under your toes of both feet and grip your toes.</p><hr/>
+    <a class="read_more" href="https://www.hip.fit/e/drop-the-soap">Read More</a>
+    <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+  <img src="images/8.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Toothbrush Calf Raises</h4>
+    <p class="card-text">Can we agree that well-shaped calf muscles make you look great in your running shorts? How about with that cocktail dress and those new heels? </p><hr/>
+    <h5>Instructions</h5>
+    <p>Stand square in front of the mirror with your feet flat on the floor and your tailbone tucked in. You can place one hand on the counter if you need to for balance. Lift your heels off the floor; stand on your tippy toes. </p><hr/>
+    <a class="read_more" href="https://www.hip.fit/e/toothbrush-calf-raises">Read More</a>
+    <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+  <img src="images/10.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Arm Stretch On The Can</h4>
+    <p class="card-text">It’s best known as a great stretch to warm things up before exercise, but it’s also a perfect way to relieve the day’s stress and anxiety while you’re seated on the can.</p><hr/>
+    <h5>Instructions</h5>
+    <p>Lift one of your arms over your head, positioning the bicep several inches away from your ear and hang your forearm behind you. Grasp your elevated elbow with the other hand.</p><hr/>
+    <a class="read_more" href="https://www.hip.fit/e/arm-stretch-on-the-can">Read More</a>
+    <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+  </div>
+</div>
+  </div>
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+  <img src="images/9.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">Toothbrush Squats</h4>
+    <p class="card-text">Well, for starters you’ll have really clean teeth. We’re talking about squats here, so it’s a bit of a stretch to think we can make them fun.</p><hr/>
+    <h5>Instructions</h5>
+    <p>Stand with your feet turned slightly outward under your hips. Squeeze your buttocks. Now, slowly bend your knees to lower your trunk just a few inches and keep your feet flat on the floor.</p><hr/>
+    <a class="read_more" href="https://www.hip.fit/e/toothbrush-squats">Read More</a>
+    <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+  <!--第三行-->
+  <div class="move">
+    <h2 style="color:">On the Move.</h2>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+      <div class="card" style="width: 18rem;">
+    <img src="images/5.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h4 class="card-title">Airplane Chest Stretch</h4>
+      <p class="card-text">Use this simple chest stretch in your seat to stretch your chest and reduce the tension you feel in your chest and you will be getting off the plane revitalized and ready to go about your day!</p><hr/>
+      <h5>Instructions</h5>
+      <p>Sit forward in your seat and put your arms behind you, palms flat on the seat. Look up slightly and open your chest up towards the ceiling.</p><hr/>
+      <a class="read_more" href="https://www.hip.fit/e/airplane-chest-stretch">Read More</a>
+      <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+    </div>
+  </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card" style="width: 18rem;">
+    <img src="images/6.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h4 class="card-title">Sitting Commuter Pec Stretch</h4>
+      <p class="card-text">People usually aren't happy while sitting in traffic on their way home from work but you will be if you stretch those pecs while you are waiting for traffic to clear. </p><hr/>
+      <h5>Instructions</h5>
+      <p>You might need to open up your window for this one and you probably only want to do it while the car is stopped at a light. Bring your arms out to the side and bring your chest up and out in front of you.</p><hr/>
+      <a class="read_more" href="https://www.hip.fit/e/sitting-commuter-pec-stretch">Read More</a>
+      <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+    </div>
+  </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card" style="width: 18rem;">
+    <img src="images/11.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h4 class="card-title">Standing Train Commute</h4>
+      <p class="card-text">"There is nothing better than riding the train with everyone else in the morning" - no one ever. That being said, riding the train and doing it in standing helps with any number of things including blood pressure regulation, balance and endurance.</p><hr/>
+      <h5>Instructions</h5>
+      <p>A simple exercise but something that can be pretty challenging: Ride the train and do it while standing.</p><hr/>
+      <a class="read_more" href="https://www.hip.fit/e/standing-train-commute">Read More</a>
+      <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+    </div>
+  </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="card" style="width: 18rem;">
+    <img src="images/12.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h4 class="card-title">One Legged Squat</h4>
+      <p class="card-text">The one-legged squat helps to reduce spinal compression and knee pain while improving your balance and core stability.</p><hr/>
+      <h5>Instructions</h5>
+      <p>With your arms in front of you, plant your dominant leg and raise the other 6" off the floor. Bend at the knee, drive your hips backward and descend until your butt touches the stairs.</p><hr/>
+      <a class="read_more" href="https://www.hip.fit/e/one-legged-squat">Read More</a>
+      <!--a href="#" class="btn btn-primary">Go somewhere</a-->
+    </div>
+  </div>
+    </div>
+  </div>
+    </div>
+</div>
+</div>
+
+<!--第四页-->
+      <div id="Sleep" class="works">
+         <div class="container">
+<!--标题-->
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <span>Everyone can have</span>
+                     <h2> <strong class="yellow">Healthy </strong>Sleep</h2>
+                  </div>
+               </div>
+            </div>
+<!--第一行卡片-->
+            <div class="row">
+               <div class="col-md-4">
+                  <div id="white_bg" class="works_box">
+                     <h4>01</h4>
+                     <img src="images/b.png" class="box-img-top" alt="...">
+                     <p>Foreign Language Listening</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div id="white_bg" class="works_box ">
+                     <h4>02</h4>
+                     <img src="images/c.png" class="box-img-top" alt="...">
+                     <p>Count Sheep</p>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div id="white_bg" class="works_box">
+                     <h4>03</h4>
+                     <img src="images/a.png" class="box-img-top" alt="...">
+                     <p>White Noise</p>
+                  </div>
+               </div>
+            </div>
+<!--第二行卡片-->
+<div class="row">
+   <div class="col-md-4">
+      <div id="white_bg" class="works_box">
+         <h4>04</h4>
+         <img src="images/d.png" class="box-img-top" alt="...">
+         <p>Meditation</p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div id="white_bg" class="works_box ">
+         <h4>05</h4>
+         <img src="images/e.png" class="box-img-top" alt="...">
+         <p>Insomnia Radio</p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div id="white_bg" class="works_box">
+         <h4>06</h4>
+         <img src="images/f.png" class="box-img-top" alt="...">
+         <p>Roll Eyes</p>
+      </div>
+   </div>
+</div>
+<!--第三行卡片-->
+<div class="row">
+   <div class="col-md-4">
+      <div id="white_bg" class="works_box">
+         <h4>07</h4>
+         <img src="images/g.png" class="box-img-top" alt="...">
+         <p>Classical Chinese Reading</p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div id="white_bg" class="works_box ">
+         <h4>08</h4>
+         <img src="images/h.png" class="box-img-top" alt="...">
+         <p>Point Message</p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div id="white_bg" class="works_box">
+         <h4>09</h4>
+         <img src="images/i.png" class="box-img-top" alt="...">
+         <p>Intermittent Breathing</p>
+      </div>
+   </div>
+</div>
+         </div>
+      </div>
+
+<!--第五页-->
+      <div id="Products" class="clients">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-md-7">
+                  <div class="padding_lert">
+                     <div class="titlepage">
+                        <h2> <strong class="yellow">Products  </strong>Share</h2>
+                        <p>Please don't be stingy to share useful products and tips about health with us.</p>
+                     </div>
+                     <form id="request" class="main_form">
+                                       <div class="row">
+                                          <div class="col-md-12 ">
+                                             <input class="contactus" placeholder="Username" type="type" name="Username">
+                                          </div>
+                                          <div class="col-md-12">
+                                             <input class="contactus" placeholder="Products / Tips" type="type" name="Products / Tips">
+                                          </div>
+                                          <div class="col-md-12">
+                                             <input class="contactus" placeholder="Reason" type="type" name="Reason">
+                                          </div>
+                                          <div class="col-md-12">
+                                             <textarea class="contactus" placeholder="Something  else  what  to  say" type="type" Message="Name"></textarea>
+                                          </div>
+                                          <div class="col-sm-12">
+                                             <button class="send_btn">Share</button>
+                                          </div>
+                                       </div>
+                 </div>
+               </div>
+<!--right-->
+               <div class="col-md-5">
+                  <div class="ad">
+                     <h2>广 告 位 招 租</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+<!--  footer -->
+      <footer>
+         <div id="footer" class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                     <div class="cont">
+                        <h3> Wish Everyone  <br> Healthy and Happy Everyday</h3>
+                        <p>Thanks  for  visiting  zzs's  first  personal  website</p>
+                     </div>
+                     <button class="sub_btn" href="#banner_main">Read Again</button>
+                  </div>
+               </div>
+            </div>
+            <div class="hipfit">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>The "Exercise" Section is from : <a href="https://www.hip.fit/">the website www.hip.fit.com.</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- Javascript files-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!--sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
 </html>
